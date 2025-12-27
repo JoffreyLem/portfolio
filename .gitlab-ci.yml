@@ -106,6 +106,5 @@ deploy:
   environment:
     name: production
     url: https://portofolio.botbot.fr
-  tags:
-    - docker
+
 

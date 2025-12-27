@@ -69,7 +69,7 @@ export default function Contact() {
         >
           <div className="flex flex-col items-center space-y-8">
             <p className="text-center text-gray-300 text-lg max-w-2xl leading-relaxed">
-              Pour toute question ou échange professionnel, n'hésitez pas à me
+              Pour toute question ou échange professionnel, n&apos;hésitez pas à me
               contacter via les canaux suivants :
             </p>
 
