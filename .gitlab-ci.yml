@@ -71,8 +71,6 @@ docker-build:
 deploy:
   stage: deploy
   image: docker:24
-  services:
-    - docker:24-dind
   before_script:
     # Connexion au registry GitLab
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
@@ -102,7 +100,6 @@ deploy:
     - docker logs --tail 20 portfolio
   only:
     - main
-  when: manual
   environment:
     name: production
     url: https://portofolio.botbot.fr
