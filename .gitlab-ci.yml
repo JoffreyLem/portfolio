@@ -37,7 +37,7 @@ build:
 # Docker build & push stage - Construction et publication de l'image
 docker-build:
   stage: docker-build
-  image: docker:24
+  image: docker:latest
   variables:
     DOCKER_BUILDKIT: 1
     DOCKER_DRIVER: overlay2
