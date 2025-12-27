@@ -69,7 +69,7 @@ docker-build:
 # Deploy stage - Déploiement via runner Docker
 deploy:
   stage: deploy
-  image: docker:24
+  image: docker:latest
   before_script:
     # Connexion au registry GitLab
     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
