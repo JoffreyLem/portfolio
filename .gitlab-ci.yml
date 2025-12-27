@@ -19,8 +19,6 @@ cache:
 # Build & Test stage - Compilation et linting combinés
 build:
   stage: build
-  services:
-    - docker:24-dind
   image: node:20-alpine
   script:
     - npm ci --prefer-offline --no-audit
@@ -40,8 +38,6 @@ build:
 docker-build:
   stage: docker-build
   image: docker:24
-  services:
-    - docker:24-dind
   variables:
     DOCKER_BUILDKIT: 1
     DOCKER_DRIVER: overlay2
