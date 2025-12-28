@@ -65,7 +65,7 @@ export const experiences: Experience[] = [
   {
     company: 'CGI',
     role: 'Développeur API et Support Niveau 3',
-    period: '2020 - 2022',
+    period: '2019 - 2022',
     description:
       'Développement C# avec responsabilités en MCO (Maintenance en Conditions Opérationnelles) et support niveau 3 en production.',
     technologies: ['C#', '.NET', 'API REST', 'SQL Server', 'Support Production'],
