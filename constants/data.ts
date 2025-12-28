@@ -115,6 +115,8 @@ const devopsSkills = [
   { name: 'Ansible', level: 4 },
   { name: 'CI/CD', level: 3.5 },
   { name: 'Monitoring & Observabilité', level: 4 },
+  { name: 'Script bash Linux', level: 3 },
+  { name: 'Script PowerShell', level: 2 },
 ]
 
 export const skillCategories: SkillCategory[] = [
@@ -294,7 +296,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/JoffreyLem/portfolio',
   },
   {
-    title: 'ProjectDroit - Assistant Juridique IA',
+    title: 'Project Droit - Assistant Juridique IA',
     description:
       '⚠️ Projet Expérimental - Application d\'assistance juridique combinant l\'IA (LLM) avec l\'API Legifrance pour analyser et répondre à des questions juridiques. Architecture Clean Architecture avec .NET 8, React et intégration de modèles LLM (Ollama, Gemini).',
     technologies: [
