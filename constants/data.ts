@@ -84,7 +84,7 @@ const backendSkills = [
   { name: 'ASP.NET Core', level: 5 },
   { name: 'Entity Framework Core', level: 4 },
   { name: 'Architectures distribuées', level: 3.5 },
-  { name: 'API REST / GraphQL', level: 4 },
+  { name: 'API REST', level: 4 },
   { name: 'Microservices', level: 4 },
   { name: 'Clean Architecture', level: 4 },
 ]
@@ -111,8 +111,8 @@ const databaseSkills = [
 const devopsSkills = [
   { name: 'MCO / Support Niveau 3', level: 4 },
   { name: 'Docker', level: 4 },
-  { name: 'Kubernetes ( apprentissage )', level: 2.5 },
-  { name: 'Ansible', level: 4 },
+  { name: 'Kubernetes ( apprentissage )', level: 2 },
+  { name: 'Ansible', level: 3 },
   { name: 'CI/CD', level: 3.5 },
   { name: 'Monitoring & Observabilité', level: 4 },
   { name: 'Script bash Linux', level: 3 },
