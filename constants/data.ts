@@ -18,14 +18,16 @@ import {
 
 export const experiences: Experience[] = [
   {
-    company: 'Peaksys',
+    company: 'Peaksys ( discount )',
     role: 'Développeur C# / Kafka',
     period: 'Poste actuel',
     description:
-      'Intégré à une équipe produit, développement et maintenance de systèmes distribués utilisant Kafka pour la gestion des événements en temps réel.',
-    technologies: ['C#', '.NET', 'Kafka', 'Microservices', 'Event Streaming'],
+      'Intégré à une équipe produit, développement et maintenance de systèmes distribués utilisant Kafka pour la gestion des événements en temps réel. Responsabilités sur le développement d\'APIs et la gestion de production en tant qu\'équipe produit.',
+    technologies: ['C#', '.NET', 'Kafka', 'Microservices', 'Event Streaming', 'API REST'],
     highlights: [
       'Développement de services événementiels haute performance',
+      'Développement d\'APIs REST pour la gestion des commandes',
+      'Gestion de production et support en équipe produit',
       'Optimisation des pipelines de données en temps réel',
       'Collaboration en équipe produit agile',
     ],
@@ -35,12 +37,13 @@ export const experiences: Experience[] = [
     role: 'Développeur C# / Js',
     period: '2022 - 2024',
     description:
-      'Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL.',
-    technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET'],
+      'Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL. Développement d\'APIs et gestion de production sur les systèmes critiques.',
+    technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET', 'API REST'],
     highlights: [
       'Architecture de messagerie distribuée avec RabbitMQ',
-      'Migration et optimisation de bases MongoDB',
       'Développement d\'APIs REST pour services bancaires',
+      'Gestion de bases MongoDB',
+      'Gestion de production et support des systèmes critiques',
     ],
   },
   {
@@ -58,48 +61,60 @@ export const experiences: Experience[] = [
   },
 ]
 
+// Compétences de base (sans icônes) - réutilisées pour skillCategoriesWithIcons
+const backendSkills = [
+  { name: 'C# / .NET', level: 95 },
+  { name: 'Architectures distribuées', level: 85 },
+  { name: 'API REST / GraphQL', level: 88 },
+  { name: 'Microservices', level: 85 },
+  { name: 'Design Pattern : Command', level: 85 },
+]
+
+const messagingSkills = [
+  { name: 'Apache Kafka', level: 85 },
+  { name: 'RabbitMQ', level: 88 },
+  { name: 'Event Sourcing', level: 75 },
+]
+
+const frontendSkills = [
+  { name: 'React', level: 85 },
+  { name: 'TypeScript', level: 85 },
+]
+
+const databaseSkills = [
+  { name: 'MongoDB', level: 88 },
+  { name: 'SQL Server', level: 85 },
+  { name: 'Redis', level: 80 },
+]
+
+const devopsSkills = [
+  { name: 'MCO / Support Niveau 3', level: 90 },
+  { name: 'Docker', level: 85 },
+  { name: 'Kubernetes', level: 80 },
+  { name: 'CI/CD', level: 80 },
+  { name: 'Monitoring & Observabilité', level: 85 },
+]
+
 export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend & Architecture',
-    skills: [
-      { name: 'C# / .NET', level: 95 },
-      { name: 'Architectures distribuées', level: 90 },
-      { name: 'API REST / GraphQL', level: 88 },
-      { name: 'Microservices', level: 85 },
-    ],
+    skills: backendSkills,
   },
   {
     title: 'Messaging & Event Streaming',
-    skills: [
-      { name: 'Apache Kafka', level: 90 },
-      { name: 'RabbitMQ', level: 88 },
-      { name: 'Event Sourcing', level: 80 },
-    ],
+    skills: messagingSkills,
   },
   {
     title: 'Frontend & UI',
-    skills: [
-      { name: 'React', level: 85 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Next.js', level: 80 },
-    ],
+    skills: frontendSkills,
   },
   {
     title: 'Bases de données',
-    skills: [
-      { name: 'MongoDB', level: 88 },
-      { name: 'SQL Server', level: 85 },
-      { name: 'Redis', level: 80 },
-    ],
+    skills: databaseSkills,
   },
   {
     title: 'DevOps & Production',
-    skills: [
-      { name: 'MCO / Support Niveau 3', level: 90 },
-      { name: 'Docker', level: 85 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'Monitoring & Observabilité', level: 85 },
-    ],
+    skills: devopsSkills,
   },
 ]
 
@@ -107,50 +122,27 @@ export const skillCategoriesWithIcons = [
   {
     title: 'Backend & Architecture',
     icon: Server,
-    skills: [
-      { name: 'C# / .NET', level: 95 },
-      { name: 'Architectures distribuées', level: 90 },
-      { name: 'API REST / GraphQL', level: 88 },
-      { name: 'Microservices', level: 85 },
-      { name: 'Design Pattern : Command', level: 85 },
-    ],
+    skills: backendSkills,
   },
   {
     title: 'Messaging & Event Streaming',
     icon: MessageSquare,
-    skills: [
-      { name: 'Apache Kafka', level: 90 },
-      { name: 'RabbitMQ', level: 88 },
-      { name: 'Event Sourcing', level: 80 },
-    ],
+    skills: messagingSkills,
   },
   {
     title: 'Frontend & UI',
     icon: Code2,
-    skills: [
-      { name: 'React', level: 85 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Next.js', level: 80 },
-    ],
+    skills: frontendSkills,
   },
   {
     title: 'Bases de données',
     icon: Database,
-    skills: [
-      { name: 'MongoDB', level: 88 },
-      { name: 'SQL Server', level: 85 },
-      { name: 'Redis', level: 80 },
-    ],
+    skills: databaseSkills,
   },
   {
     title: 'DevOps & Production',
     icon: Monitor,
-    skills: [
-      { name: 'MCO / Support Niveau 3', level: 90 },
-      { name: 'Docker', level: 85 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'Monitoring & Observabilité', level: 85 },
-    ],
+    skills: devopsSkills,
   },
 ]
 
