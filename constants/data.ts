@@ -65,20 +65,25 @@ export const experiences: Experience[] = [
 // Système de notation sur 5 points (1-5)
 const backendSkills = [
   { name: 'C# / .NET', level: 5 },
+  { name: 'ASP.NET Core', level: 5 },
+  { name: 'Entity Framework Core', level: 4 },
   { name: 'Architectures distribuées', level: 4 },
   { name: 'API REST / GraphQL', level: 4 },
   { name: 'Microservices', level: 4 },
+  { name: 'Clean Architecture', level: 4 },
 ]
 
 const messagingSkills = [
   { name: 'Apache Kafka', level: 4 },
   { name: 'RabbitMQ', level: 4 },
+  { name: 'SignalR', level: 4 },
   { name: 'Event Sourcing', level: 4 },
 ]
 
 const frontendSkills = [
   { name: 'React', level: 4 },
   { name: 'TypeScript', level: 4 },
+  { name: 'Next.js', level: 4 },
 ]
 
 const databaseSkills = [
@@ -155,14 +160,16 @@ export const stackCategoriesWithIcons = [
       'C#',
       '.NET / .NET Core',
       'ASP.NET Core',
+      'Entity Framework Core',
       'JavaScript / TypeScript',
       'React',
+      'Next.js',
     ],
   },
   {
     title: 'Messaging & Event Streaming',
     icon: MessageSquare,
-    items: ['Apache Kafka', 'RabbitMQ', 'Event Sourcing', 'CQRS'],
+    items: ['Apache Kafka', 'RabbitMQ', 'SignalR', 'Event Sourcing', 'CQRS'],
   },
   {
     title: 'Bases de données',
@@ -190,6 +197,11 @@ export const stackCategoriesWithIcons = [
     icon: Settings,
     items: [
       'Git',
+      'Vite',
+      'Tailwind CSS',
+      'Framer Motion',
+      'AutoMapper',
+      'Clean Architecture',
       'Agile / Scrum',
       'TDD / BDD',
       'Monitoring & Observabilité',
@@ -199,6 +211,58 @@ export const stackCategoriesWithIcons = [
 ]
 
 export const projects: Project[] = [
+  {
+    title: 'Moteur de Décision de Trading IA',
+    description:
+      '🚧 Projet en cours - Moteur de décision de trading automatisé basé sur l\'intelligence artificielle. Architecture hybride combinant C# pour le backend et la logique métier, Python pour les modèles d\'IA et le machine learning, et React pour l\'interface utilisateur. Intégration de modèles prédictifs et d\'analyse de sentiment pour optimiser les décisions de trading.',
+    technologies: [
+      'C#',
+      '.NET',
+      'ASP.NET Core',
+      'Python',
+      'React',
+      'TypeScript',
+      'Machine Learning',
+      'IA',
+    ],
+    category: 'Full Stack / Trading / IA / En cours',
+    highlights: [
+      'Architecture hybride C# / Python pour le traitement IA',
+      'Modèles de machine learning pour prédiction de marché',
+      'Analyse de sentiment et traitement du langage naturel',
+      'Système de décision automatisé avec validation manuel'
+    ],
+    githubUrl: undefined,
+  },
+  {
+    title: 'Trading Bot - Robot de Trading Automatisé',
+    description:
+      '⏸️ Projet Archivé - Application complète de trading automatisé avec backend .NET et frontend React. Architecture modulaire avec compilation dynamique de stratégies, analyse technique avancée (indicateurs, patterns de chandeliers), gestion de risque, et intégration SignalR pour le temps réel. Intégration expérimentale LLM pour l\'analyse de marché.',
+    technologies: [
+      '.NET',
+      'C#',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'SignalR',
+      'React',
+      'TypeScript',
+      'Vite',
+      'TailwindCSS',
+      'Docker',
+    ],
+    category: 'Full Stack / Trading / Archivé',
+    highlights: [
+      'Architecture modulaire avec bibliothèques spécialisées (Trading, API, LLM)',
+      'Compilation dynamique de stratégies C# sans redémarrage',
+      'Analyse technique complète (SMA, EMA, RSI, MACD, Bollinger, patterns chandeliers)',
+      'Gestion de risque automatisée (Stop Loss, Take Profit, Trailing Stop)',
+      'Communication temps réel via SignalR (WebSockets)',
+      'Frontend React avec dashboard temps réel et graphiques',
+      'Intégration expérimentale LLM pour analyse de sentiment',
+      'Génération automatique de DTOs TypeScript depuis C#',
+    ],
+    githubUrl: 'https://github.com/JoffreyLem/trading-botbot-fr-v3',
+  },
   {
     title: 'Portfolio',
     description:
@@ -214,18 +278,57 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/JoffreyLem/portfolio',
   },
   {
-    title: 'Projets à venir',
+    title: 'ProjectDroit - Assistant Juridique IA',
     description:
-      'Cette section sera bientôt enrichie avec mes réalisations techniques. Je prépare actuellement la mise en ligne de projets illustrant mon expertise en architectures distribuées, systèmes backend et solutions techniques complexes.',
-    technologies: [],
-    category: 'En préparation',
+      '⚠️ Projet Expérimental - Application d\'assistance juridique combinant l\'IA (LLM) avec l\'API Legifrance pour analyser et répondre à des questions juridiques. Architecture Clean Architecture avec .NET 8, React et intégration de modèles LLM (Ollama, Gemini).',
+    technologies: [
+      '.NET 8',
+      'ASP.NET Core',
+      'React',
+      'TypeScript',
+      'MongoDB',
+      'Docker',
+      'Ollama',
+      'Clean Architecture',
+    ],
+    category: 'Backend / IA / Expérimental',
     highlights: [
-      'Projets en cours de finalisation',
-      'Documentation et préparation en cours',
-      'Bientôt disponible',
+      'Architecture Clean Architecture en couches (.NET 8)',
+      'Intégration LLM (Ollama local et Gemini API)',
+      'Extraction automatique de mots-clés juridiques via IA',
+      'Recherche dans l\'API officielle Legifrance',
+      'Interface React avec recherche globale et avancée',
+      'Infrastructure Docker Compose (MongoDB, Seq, Ollama)',
+    ],
+    githubUrl: 'https://github.com/JoffreyLem/ProjectDroits',
+  },
+  {
+    title: 'ExtiaPresenceApp',
+    description:
+      'Application web de gestion de présence développée pour l\'ESN Extia. Permet la gestion des réservations, des événements et le suivi de localisation des collaborateurs. Architecture complète avec backend .NET (ASP.NET Core, Entity Framework Core) et frontend React (React 18, TypeScript, Vite).',
+    technologies: [
+      '.NET',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'React',
+      'TypeScript',
+      'Vite',
+      'AutoMapper',
+      'Docker',
+    ],
+    category: 'Full Stack / Application Métier',
+    highlights: [
+      'API REST ASP.NET Core avec architecture en couches',
+      'Entity Framework Core avec migrations et repositories',
+      'Frontend React 18 avec TypeScript et Vite',
+      'Système d\'authentification et gestion des utilisateurs',
+      'Gestion des événements et réservations',
+      'Interface d\'administration complète',
+      'Infrastructure Docker Compose (dev et production)',
+      'Middleware de gestion d\'exceptions et logging',
     ],
     githubUrl: undefined,
-  },
+  }
 ]
 
 export const projectsWithIcons = [
@@ -235,7 +338,19 @@ export const projectsWithIcons = [
   },
   {
     ...projects[1],
-    icon: Code,
+    icon: Code2,
+  },
+  {
+    ...projects[2],
+    icon: Code2,
+  },
+  {
+    ...projects[3],
+    icon: Code2,
+  },
+  {
+    ...projects[4],
+    icon: Code2,
   },
 ]
 

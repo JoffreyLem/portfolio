@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Mail, Linkedin, Send } from 'lucide-react'
+import { Mail, Linkedin, Github, Send } from 'lucide-react'
 
 export default function Contact() {
   const ref = useRef(null)
@@ -21,13 +21,13 @@ export default function Contact() {
       href: 'https://www.linkedin.com/in/joffrey-lemery-920b40164/',
       icon: Linkedin,
       color: 'from-blue-600 to-blue-700',
-    }
-    // {
-    //   name: 'GitHub',
-    //   href: 'https://github.com/yourusername',
-    //   icon: Github,
-    //   color: 'from-gray-600 to-gray-700',
-    // },
+    },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/JoffreyLem',
+      icon: Github,
+      color: 'from-gray-600 to-gray-700',
+    },
   ]
 
   return (
