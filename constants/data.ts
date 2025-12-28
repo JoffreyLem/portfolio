@@ -18,32 +18,48 @@ import {
 
 export const experiences: Experience[] = [
   {
-    company: 'Peaksys ( Cdiscount )',
-    role: 'Développeur C# / Kafka',
-    period: 'Poste actuel',
+    company: 'Extia',
+    role: 'Ingénieur Développeur .NET',
+    period: '2022 - Poste actuel',
     description:
-      'Intégré à une équipe produit, développement et maintenance de systèmes distribués utilisant Kafka pour la gestion des événements en temps réel. Responsabilités sur le développement d\'APIs et la gestion de production en tant qu\'équipe produit.',
-    technologies: ['C#', '.NET', 'Kafka', 'Microservices', 'Event Streaming', 'API REST'],
+      'Ingénieur développeur .NET chez Extia, envoyé en mission chez différents clients. Développement et maintenance d\'applications backend avec expertise en architectures distribuées, microservices et gestion de production.',
+    technologies: ['C#', '.NET', 'ASP.NET Core', 'Microservices', 'API REST', 'Docker'],
     highlights: [
-      'Développement de services événementiels haute performance',
-      'Développement d\'APIs REST pour la gestion des commandes',
-      'Gestion de production et support en équipe produit',
-      'Optimisation des pipelines de données en temps réel',
-      'Collaboration en équipe produit agile',
+      'Missions chez différents clients (Peaksys/Cdiscount, Floa Banque)',
+      'Développement d\'APIs et systèmes distribués',
+      'Gestion de production',
+      'Architectures microservices et event-driven',
     ],
-  },
-  {
-    company: 'Floa Banque',
-    role: 'Développeur C# / Js',
-    period: '2022 - 2025',
-    description:
-      'Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL. Développement d\'APIs et gestion de production sur les systèmes critiques.',
-    technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET', 'API REST'],
-    highlights: [
-      'Architecture de messagerie distribuée avec RabbitMQ',
-      'Développement d\'APIs REST pour services bancaires',
-      'Gestion de bases MongoDB',
-      'Gestion de production et support des systèmes critiques',
+    missions: [
+      {
+        company: 'Peaksys ( Cdiscount )',
+        role: 'Développeur C# / Kafka',
+        period: 'Mission en cours',
+        description:
+          'Mission chez Peaksys (Cdiscount) via Extia. Intégré à une équipe produit, développement et maintenance de systèmes distribués utilisant Kafka pour la gestion des événements en temps réel. Responsabilités sur le développement d\'APIs et la gestion de production en tant qu\'équipe produit.',
+        technologies: ['C#', '.NET', 'Kafka', 'Microservices', 'Event Streaming', 'API REST'],
+        highlights: [
+          'Développement de services événementiels haute performance',
+          'Développement d\'APIs REST pour la gestion des commandes',
+          'Gestion de production et support en équipe produit',
+          'Optimisation des pipelines de données en temps réel',
+          'Collaboration en équipe produit agile',
+        ],
+      },
+      {
+        company: 'Floa Banque',
+        role: 'Développeur C# / Js',
+        period: '2022 - 2025',
+        description:
+          'Mission chez Floa Banque via Extia. Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL. Développement d\'APIs et gestion de production sur les systèmes critiques.',
+        technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET', 'API REST'],
+        highlights: [
+          'Architecture de messagerie distribuée avec RabbitMQ',
+          'Développement d\'APIs REST pour services bancaires',
+          'Gestion de bases MongoDB',
+          'Gestion de production et support des systèmes critiques',
+        ],
+      },
     ],
   },
   {
@@ -67,37 +83,37 @@ const backendSkills = [
   { name: 'C# / .NET', level: 5 },
   { name: 'ASP.NET Core', level: 5 },
   { name: 'Entity Framework Core', level: 4 },
-  { name: 'Architectures distribuées', level: 4 },
+  { name: 'Architectures distribuées', level: 3.5 },
   { name: 'API REST / GraphQL', level: 4 },
   { name: 'Microservices', level: 4 },
   { name: 'Clean Architecture', level: 4 },
 ]
 
 const messagingSkills = [
-  { name: 'Apache Kafka', level: 4 },
+  { name: 'Apache Kafka ( apprentissage )', level: 2.5 },
   { name: 'RabbitMQ', level: 4 },
   { name: 'SignalR', level: 4 },
-  { name: 'Event Sourcing', level: 4 },
+  { name: 'Event Sourcing', level: 3.5 },
 ]
 
 const frontendSkills = [
   { name: 'React', level: 4 },
   { name: 'TypeScript', level: 4 },
-  { name: 'Next.js', level: 4 },
+  { name: 'Next.js', level: 3 },
 ]
 
 const databaseSkills = [
   { name: 'MongoDB', level: 4 },
   { name: 'SQL Server', level: 4 },
-  { name: 'Redis', level: 4 },
+  { name: 'Redis', level: 3 },
 ]
 
 const devopsSkills = [
-  { name: 'MCO / Support Niveau 3', level: 5 },
+  { name: 'MCO / Support Niveau 3', level: 4 },
   { name: 'Docker', level: 4 },
-  { name: 'Kubernetes', level: 4 },
+  { name: 'Kubernetes ( apprentissage )', level: 2.5 },
   { name: 'Ansible', level: 4 },
-  { name: 'CI/CD', level: 4 },
+  { name: 'CI/CD', level: 3.5 },
   { name: 'Monitoring & Observabilité', level: 4 },
 ]
 

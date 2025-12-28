@@ -9,6 +9,7 @@ export interface Experience {
   description: string
   technologies: string[]
   highlights: string[]
+  missions?: Experience[] // Missions pour les ESN
 }
 
 export interface Project {
