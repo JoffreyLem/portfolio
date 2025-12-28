@@ -181,7 +181,7 @@ export const stackCategoriesWithIcons = [
     items: [
       'Docker',
       'Kubernetes',
-      'CI/CD (GitHub Actions, Azure DevOps)',
+      'CI/CD (Gitlab CICD, Azure DevOps)',
       'Prometheus / Grafana',
     ],
   },
@@ -200,6 +200,20 @@ export const stackCategoriesWithIcons = [
 
 export const projects: Project[] = [
   {
+    title: 'Portfolio',
+    description:
+      'Portfolio moderne et épuré développé avec Next.js 14, TypeScript et Tailwind CSS. Design 2025-2026 avec glassmorphism, animations fluides et dark mode. Déployé via Docker et CI/CD GitLab.',
+    technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Framer Motion', 'Docker'],
+    category: 'Full Stack / Portfolio',
+    highlights: [
+      'Architecture Next.js 14 avec App Router',
+      'Design moderne avec glassmorphism et animations',
+      'CI/CD complet avec GitLab et Docker',
+      'Optimisé pour les performances et le SEO',
+    ],
+    githubUrl: 'https://github.com/JoffreyLem/portfolio',
+  },
+  {
     title: 'Projets à venir',
     description:
       'Cette section sera bientôt enrichie avec mes réalisations techniques. Je prépare actuellement la mise en ligne de projets illustrant mon expertise en architectures distribuées, systèmes backend et solutions techniques complexes.',
@@ -217,6 +231,10 @@ export const projects: Project[] = [
 export const projectsWithIcons = [
   {
     ...projects[0],
+    icon: Code2,
+  },
+  {
+    ...projects[1],
     icon: Code,
   },
 ]

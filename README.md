@@ -159,31 +159,8 @@ Le pipeline se déclenche automatiquement sur :
 
 Pour déployer en production, le job `deploy` doit être déclenché manuellement depuis l'interface GitLab.
 
-## 🌐 Déploiement
 
-Le portfolio peut être déployé sur :
-- **Docker** - Via l'image Docker construite
-- **GitLab Pages** - Via le pipeline CI/CD
-- **Vercel** (recommandé pour Next.js) - Déploiement automatique depuis GitHub
-- **Netlify** - Support Next.js avec configuration automatique
-- **Kubernetes** - Via l'image Docker
 
-## 📝 Notes
 
-- Design dark mode par défaut (optimisé pour 2025-2026)
-- Responsive design (mobile, tablette, desktop)
-- Animations légères et discrètes avec Framer Motion
-- Navigation fluide avec scroll smooth et détection de section active
-- Optimisé pour les performances (lazy loading, animations au scroll)
-- Accessibilité améliorée (contrastes, navigation clavier)
 
-## 🎯 Standards 2025-2026
-
-Ce portfolio intègre les dernières tendances de design :
-- Glassmorphism et effets de profondeur
-- Micro-interactions sophistiquées
-- Typographie moderne (Inter)
-- Espacement généreux et hiérarchie visuelle claire
-- Animations fluides avec easing personnalisés
-- Gradients subtils et effets de lumière
 
