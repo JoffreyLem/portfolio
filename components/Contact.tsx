@@ -18,7 +18,7 @@ export default function Contact() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/joffrey-lemery-920b40164/',
+      href: 'https://www.linkedin.com/in/joffrey-lemery',
       icon: Linkedin,
       color: 'from-blue-600 to-blue-700',
     },

@@ -319,7 +319,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/JoffreyLem/ProjectDroits',
   },
   {
-    title: 'ExtiaPresenceApp',
+    title: 'Application de présence',
     description:
       'Application web de gestion de présence développée pour l\'ESN Extia. Permet la gestion des réservations, des événements et le suivi de localisation des collaborateurs. Architecture complète avec backend .NET (ASP.NET Core, Entity Framework Core) et frontend React (React 18, TypeScript, Vite).',
     technologies: [
