@@ -13,7 +13,8 @@ import {
   Settings,
   Zap,
   Activity,
-  Code
+  Code,
+  User
 } from 'lucide-react'
 
 export const experiences: Experience[] = [
@@ -119,6 +120,15 @@ const devopsSkills = [
   { name: 'Script PowerShell', level: 2 },
 ]
 
+const softSkills = [
+  { name: 'Autonomie', level: 4 },
+  { name: 'Adaptabilité', level: 5 },
+  { name: 'Curiosité', level: 5 },
+  { name: 'Résolution de problèmes complexes', level: 4 },
+  { name: 'Gestion du stress', level: 4 },
+  { name: 'Sens du résultat et de l\'engagement', level: 5 },
+]
+
 export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend & Architecture',
@@ -139,6 +149,10 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'DevOps & Production',
     skills: devopsSkills,
+  },
+  {
+    title: 'Soft Skills',
+    skills: softSkills,
   },
 ]
 
@@ -167,6 +181,11 @@ export const skillCategoriesWithIcons = [
     title: 'DevOps & Production',
     icon: Monitor,
     skills: devopsSkills,
+  },
+  {
+    title: 'Soft Skills',
+    icon: User,
+    skills: softSkills,
   },
 ]
 

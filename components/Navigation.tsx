@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { navItems } from '@/constants/data'
 
@@ -77,6 +77,19 @@ export default function Navigation() {
                 )}
               </motion.a>
             ))}
+            <motion.a
+              href="/data/cv.pdf"
+              download="cv.pdf"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: navItems.length * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="ml-4 px-4 py-2 text-sm font-medium text-foreground bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-lg hover:from-blue-500/30 hover:to-purple-500/30 hover:border-blue-400/50 transition-all duration-300 flex items-center gap-2"
+            >
+              <Download size={16} />
+              <span>Mon CV</span>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,6 +128,18 @@ export default function Navigation() {
                   {item.name}
                 </motion.a>
               ))}
+              <motion.a
+                href="/data/cv.pdf"
+                download="cv.pdf"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navItems.length * 0.05 }}
+                className="block px-4 py-3 text-sm font-medium text-foreground bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-lg hover:from-blue-500/30 hover:to-purple-500/30 hover:border-blue-400/50 transition-all flex items-center gap-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Download size={16} />
+                <span>Télécharger mon CV</span>
+              </motion.a>
             </div>
           </motion.div>
         )}

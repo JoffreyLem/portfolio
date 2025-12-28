@@ -12,7 +12,7 @@ export default function Contact() {
   const contactLinks = [
     {
       name: 'Email',
-      href: 'mailto:contact@example.com',
+      href: 'mailto:contact@botbot.fr',
       icon: Mail,
       color: 'from-blue-500 to-cyan-500',
     },
