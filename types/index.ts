@@ -17,6 +17,7 @@ export interface Project {
   technologies: string[]
   category: string
   highlights: string[]
+  githubUrl?: string
 }
 
 export interface Skill {

@@ -18,7 +18,7 @@ import {
 
 export const experiences: Experience[] = [
   {
-    company: 'Peaksys ( discount )',
+    company: 'Peaksys ( Cdiscount )',
     role: 'Développeur C# / Kafka',
     period: 'Poste actuel',
     description:
@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
   {
     company: 'Floa Banque',
     role: 'Développeur C# / Js',
-    period: '2022 - 2024',
+    period: '2022 - 2025',
     description:
       'Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL. Développement d\'APIs et gestion de production sur les systèmes critiques.',
     technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET', 'API REST'],
@@ -62,37 +62,38 @@ export const experiences: Experience[] = [
 ]
 
 // Compétences de base (sans icônes) - réutilisées pour skillCategoriesWithIcons
+// Système de notation sur 5 points (1-5)
 const backendSkills = [
-  { name: 'C# / .NET', level: 95 },
-  { name: 'Architectures distribuées', level: 85 },
-  { name: 'API REST / GraphQL', level: 88 },
-  { name: 'Microservices', level: 85 },
-  { name: 'Design Pattern : Command', level: 85 },
+  { name: 'C# / .NET', level: 5 },
+  { name: 'Architectures distribuées', level: 4 },
+  { name: 'API REST / GraphQL', level: 4 },
+  { name: 'Microservices', level: 4 },
 ]
 
 const messagingSkills = [
-  { name: 'Apache Kafka', level: 85 },
-  { name: 'RabbitMQ', level: 88 },
-  { name: 'Event Sourcing', level: 75 },
+  { name: 'Apache Kafka', level: 4 },
+  { name: 'RabbitMQ', level: 4 },
+  { name: 'Event Sourcing', level: 4 },
 ]
 
 const frontendSkills = [
-  { name: 'React', level: 85 },
-  { name: 'TypeScript', level: 85 },
+  { name: 'React', level: 4 },
+  { name: 'TypeScript', level: 4 },
 ]
 
 const databaseSkills = [
-  { name: 'MongoDB', level: 88 },
-  { name: 'SQL Server', level: 85 },
-  { name: 'Redis', level: 80 },
+  { name: 'MongoDB', level: 4 },
+  { name: 'SQL Server', level: 4 },
+  { name: 'Redis', level: 4 },
 ]
 
 const devopsSkills = [
-  { name: 'MCO / Support Niveau 3', level: 90 },
-  { name: 'Docker', level: 85 },
-  { name: 'Kubernetes', level: 80 },
-  { name: 'CI/CD', level: 80 },
-  { name: 'Monitoring & Observabilité', level: 85 },
+  { name: 'MCO / Support Niveau 3', level: 5 },
+  { name: 'Docker', level: 4 },
+  { name: 'Kubernetes', level: 4 },
+  { name: 'Ansible', level: 4 },
+  { name: 'CI/CD', level: 4 },
+  { name: 'Monitoring & Observabilité', level: 4 },
 ]
 
 export const skillCategories: SkillCategory[] = [
@@ -209,6 +210,7 @@ export const projects: Project[] = [
       'Documentation et préparation en cours',
       'Bientôt disponible',
     ],
+    githubUrl: undefined,
   },
 ]
 

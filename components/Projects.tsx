@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Github, ExternalLink } from 'lucide-react'
 import { projectsWithIcons } from '@/constants/data'
 
 export default function Projects() {
@@ -69,6 +70,21 @@ export default function Projects() {
                   <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </h3>
+
+                  {project.githubUrl && (
+                    <motion.a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 mb-4 transition-colors"
+                    >
+                      <Github size={18} />
+                      <span>Voir sur GitHub</span>
+                      <ExternalLink size={14} />
+                    </motion.a>
+                  )}
 
                   <p className="text-gray-400 mb-6 leading-relaxed text-base">
                     {project.description}

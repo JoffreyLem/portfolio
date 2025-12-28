@@ -68,7 +68,7 @@ export default function Skills() {
                           {skill.name}
                         </span>
                         <span className="text-xs font-semibold text-blue-400 bg-blue-500/10 px-2 py-1 rounded-full">
-                          {skill.level}%
+                          {skill.level}/5
                         </span>
                       </div>
                       <div className="h-2.5 bg-white/5 rounded-full overflow-hidden backdrop-blur-sm">
@@ -76,7 +76,7 @@ export default function Skills() {
                           initial={{ width: 0 }}
                           animate={
                             isInView
-                              ? { width: `${skill.level}%` }
+                              ? { width: `${(skill.level / 5) * 100}%` }
                               : { width: 0 }
                           }
                           transition={{
