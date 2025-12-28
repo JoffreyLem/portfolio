@@ -27,8 +27,7 @@ export default function Projects() {
             Projets
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Réalisations techniques mettant en œuvre des architectures
-            distribuées et des systèmes backend performants
+            Mes projets personnels
           </p>
         </motion.div>
 
@@ -103,15 +102,19 @@ export default function Projects() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 pt-6 border-t border-white/10">
-                    {project.technologies.map((tech) => (
-                      <motion.span
-                        key={tech}
-                        whileHover={{ scale: 1.05 }}
-                        className="px-3 py-1.5 text-xs font-medium bg-white/5 text-gray-400 rounded-full border border-white/10 hover:border-blue-500/50 hover:text-blue-400 transition-all duration-300"
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
+                    {project.technologies && project.technologies.length > 0 ? (
+                      project.technologies.map((tech) => (
+                        <motion.span
+                          key={tech}
+                          whileHover={{ scale: 1.05 }}
+                          className="px-3 py-1.5 text-xs font-medium bg-white/5 text-gray-400 rounded-full border border-white/10 hover:border-blue-500/50 hover:text-blue-400 transition-all duration-300"
+                        >
+                          {tech}
+                        </motion.span>
+                      ))
+                    ) : (
+                      <span className="text-xs text-gray-500 italic">Technologies à venir</span>
+                    )}
                   </div>
                 </div>
               </motion.div>

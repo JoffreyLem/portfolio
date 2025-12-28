@@ -18,16 +18,16 @@ export default function Contact() {
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourprofile',
+      href: 'https://www.linkedin.com/in/joffrey-lemery-920b40164/',
       icon: Linkedin,
       color: 'from-blue-600 to-blue-700',
-    },
-    {
-      name: 'GitHub',
-      href: 'https://github.com/yourusername',
-      icon: Github,
-      color: 'from-gray-600 to-gray-700',
-    },
+    }
+    // {
+    //   name: 'GitHub',
+    //   href: 'https://github.com/yourusername',
+    //   icon: Github,
+    //   color: 'from-gray-600 to-gray-700',
+    // },
   ]
 
   return (
@@ -57,7 +57,7 @@ export default function Contact() {
             Contact
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Ouvert aux échanges techniques et opportunités professionnelles
+            Toujours ouvert aux échanges techniques
           </p>
         </motion.div>
 
@@ -69,7 +69,7 @@ export default function Contact() {
         >
           <div className="flex flex-col items-center space-y-8">
             <p className="text-center text-gray-300 text-lg max-w-2xl leading-relaxed">
-              Pour toute question ou échange professionnel, n&apos;hésitez pas à me
+              Pour toute question technique ou échange professionnel, n&apos;hésitez pas à me
               contacter via les canaux suivants :
             </p>
 

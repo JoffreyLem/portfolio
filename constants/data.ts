@@ -12,7 +12,8 @@ import {
   Cloud,
   Settings,
   Zap,
-  Activity
+  Activity,
+  Code
 } from 'lucide-react'
 
 export const experiences: Experience[] = [
@@ -31,7 +32,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Floa Banque',
-    role: 'Développeur Transverse',
+    role: 'Développeur C# / Js',
     period: '2022 - 2024',
     description:
       'Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL.',
@@ -111,6 +112,7 @@ export const skillCategoriesWithIcons = [
       { name: 'Architectures distribuées', level: 90 },
       { name: 'API REST / GraphQL', level: 88 },
       { name: 'Microservices', level: 85 },
+      { name: 'Design Pattern : Command', level: 85 },
     ],
   },
   {
@@ -162,7 +164,6 @@ export const stackCategoriesWithIcons = [
       'ASP.NET Core',
       'JavaScript / TypeScript',
       'React',
-      'Next.js',
     ],
   },
   {
@@ -188,7 +189,6 @@ export const stackCategoriesWithIcons = [
       'Docker',
       'Kubernetes',
       'CI/CD (GitHub Actions, Azure DevOps)',
-      'Terraform',
       'Prometheus / Grafana',
     ],
   },
@@ -207,51 +207,15 @@ export const stackCategoriesWithIcons = [
 
 export const projects: Project[] = [
   {
-    title: 'Système de traitement événementiel avec Kafka',
+    title: 'Projets à venir',
     description:
-      'Architecture distribuée pour le traitement en temps réel de millions d\'événements par jour. Implémentation de patterns de consommation, gestion des partitions et monitoring avancé.',
-    technologies: ['C#', 'Kafka', '.NET', 'Docker', 'Prometheus'],
-    category: 'Backend / Event Streaming',
+      'Cette section sera bientôt enrichie avec mes réalisations techniques. Je prépare actuellement la mise en ligne de projets illustrant mon expertise en architectures distribuées, systèmes backend et solutions techniques complexes.',
+    technologies: [],
+    category: 'En préparation',
     highlights: [
-      'Throughput de 100k+ événements/seconde',
-      'Patterns : Consumer Groups, Exactly-Once Semantics',
-      'Monitoring et alerting intégrés',
-    ],
-  },
-  {
-    title: 'API Gateway avec messagerie asynchrone',
-    description:
-      'Gateway centralisé avec intégration RabbitMQ pour la communication asynchrone entre microservices. Gestion des queues, retry policies et dead letter queues.',
-    technologies: ['C#', 'RabbitMQ', '.NET Core', 'Docker', 'Redis'],
-    category: 'Backend / Messaging',
-    highlights: [
-      'Architecture microservices scalable',
-      'Patterns : Pub/Sub, RPC asynchrone',
-      'Haute disponibilité et résilience',
-    ],
-  },
-  {
-    title: 'Plateforme de monitoring et observabilité',
-    description:
-      'Dashboard de monitoring pour systèmes distribués avec métriques en temps réel, logs centralisés et alerting intelligent. Intégration avec plusieurs sources de données.',
-    technologies: ['React', 'TypeScript', 'MongoDB', 'Node.js', 'Grafana'],
-    category: 'Full Stack / Observabilité',
-    highlights: [
-      'Visualisation de métriques en temps réel',
-      'Agrégation de logs multi-sources',
-      'Système d\'alerting configurable',
-    ],
-  },
-  {
-    title: 'Service de gestion de données avec MongoDB',
-    description:
-      'Service backend optimisé pour la gestion de grandes quantités de données non structurées. Implémentation de sharding, indexation avancée et requêtes performantes.',
-    technologies: ['C#', 'MongoDB', '.NET', 'Docker', 'Kubernetes'],
-    category: 'Backend / Data Management',
-    highlights: [
-      'Optimisation des requêtes complexes',
-      'Sharding et réplication configurés',
-      'Migration de données zéro-downtime',
+      'Projets en cours de finalisation',
+      'Documentation et préparation en cours',
+      'Bientôt disponible',
     ],
   },
 ]
@@ -259,19 +223,7 @@ export const projects: Project[] = [
 export const projectsWithIcons = [
   {
     ...projects[0],
-    icon: Zap,
-  },
-  {
-    ...projects[1],
-    icon: Activity,
-  },
-  {
-    ...projects[2],
-    icon: Activity,
-  },
-  {
-    ...projects[3],
-    icon: Database,
+    icon: Code,
   },
 ]
 

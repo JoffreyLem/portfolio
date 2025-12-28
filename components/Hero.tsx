@@ -29,23 +29,31 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass rounded-full border border-white/10"
           >
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-gray-300">Développeur Backend & Architectures Distribuées</span>
+            <span className="text-sm text-gray-300">Ingénieur Développeur .NET</span>
           </motion.div>
 
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight">
-            <span className="gradient-text">Développeur</span>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
+            <span className="gradient-text">Joffrey</span>
             <br />
-            <span className="gradient-accent-text">Logiciel</span>
+            <span className="gradient-accent-text">LEMERY</span>
           </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed font-light italic"
           >
-            Spécialisé en <span className="text-foreground font-medium">architectures distribuées</span> et{' '}
-            <span className="text-foreground font-medium">systèmes backend</span> performants
+            &quot;Ma curiosité me pousse là où le code devient complexe et l&apos;ingénierie indispensable.&quot;
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-lg sm:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Expert & Amateur de défis
           </motion.p>
 
           <motion.div
