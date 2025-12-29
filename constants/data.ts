@@ -2,7 +2,7 @@
  * Données statiques du portfolio
  */
 
-import type { Experience, Project, SkillCategory, StackCategory } from '@/types'
+import type { Experience, Project, SkillCategory, StackCategory, UnifiedSkillCategory } from '@/types'
 import { 
   Server, 
   MessageSquare, 
@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     period: '2022 - Poste actuel',
     description:
       'Ingénieur développeur .NET chez Extia, envoyé en mission chez différents clients. Développement et maintenance d\'applications backend avec expertise en architectures distribuées, microservices et gestion de production.',
-    technologies: ['C#', '.NET', 'ASP.NET Core', 'Microservices', 'API REST', 'Docker'],
+    technologies: ['C#', '.NET', 'ASP.NET Core', 'Microservices', 'API REST', 'Docker', 'Kafka', 'Event Streaming', 'JavaScript', 'MongoDB', 'RabbitMQ'],
     highlights: [
       'Missions chez différents clients (Peaksys/Cdiscount, Floa Banque)',
       'Développement d\'APIs et systèmes distribués',
@@ -78,81 +78,48 @@ export const experiences: Experience[] = [
   },
 ]
 
-// Compétences de base (sans icônes) - réutilisées pour skillCategoriesWithIcons
-// Système de notation sur 5 points (1-5)
+// Compétences essentielles - Système de notation sur 5 points (1-5)
 const backendSkills = [
   { name: 'C# / .NET', level: 5 },
   { name: 'ASP.NET Core', level: 5 },
-  { name: 'Entity Framework Core', level: 4 },
-  { name: 'Architectures distribuées', level: 3.5 },
-  { name: 'API REST', level: 4 },
   { name: 'Microservices', level: 4 },
   { name: 'Clean Architecture', level: 4 },
 ]
 
-const messagingSkills = [
-  { name: 'Apache Kafka ( apprentissage )', level: 2.5 },
+const eventStreamingSkills = [
+  { name: 'Apache Kafka ( Apprentissage )', level: 2.5 },
   { name: 'RabbitMQ', level: 4 },
-  { name: 'SignalR', level: 4 },
-  { name: 'Event Sourcing', level: 3.5 },
-]
-
-const frontendSkills = [
-  { name: 'React', level: 4 },
-  { name: 'TypeScript', level: 4 },
-  { name: 'Next.js', level: 3 },
+  { name: 'Event-Driven Architecture', level: 4 },
+  { name: 'Event Sourcing / CQRS', level: 4 },
 ]
 
 const databaseSkills = [
   { name: 'MongoDB', level: 4 },
+  { name: 'PostgreSQL', level: 4 },
   { name: 'SQL Server', level: 4 },
   { name: 'Redis', level: 3 },
 ]
 
 const devopsSkills = [
-  { name: 'MCO / Support Niveau 3', level: 4 },
   { name: 'Docker', level: 4 },
-  { name: 'Kubernetes ( apprentissage )', level: 2 },
-  { name: 'Ansible', level: 3 },
-  { name: 'CI/CD', level: 3.5 },
-  { name: 'Monitoring & Observabilité', level: 4 },
-  { name: 'Script bash Linux', level: 3 },
-  { name: 'Script PowerShell', level: 2 },
+  { name: 'Kubernetes ( Apprentissage )', level: 3 },
+  { name: 'CI/CD', level: 4 },
+  { name: 'Observabilité', level: 4 },
 ]
 
-const softSkills = [
-  { name: 'Autonomie', level: 4 },
-  { name: 'Adaptabilité', level: 5 },
-  { name: 'Curiosité', level: 5 },
-  { name: 'Résolution de problèmes complexes', level: 4 },
-  { name: 'Gestion du stress', level: 4 },
-  { name: 'Sens du résultat et de l\'engagement', level: 5 },
-]
-
+// Anciennes structures (conservées pour compatibilité, mais non utilisées)
 export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend & Architecture',
     skills: backendSkills,
   },
   {
-    title: 'Messaging & Event Streaming',
-    skills: messagingSkills,
+    title: 'Event Streaming & Messaging',
+    skills: eventStreamingSkills,
   },
   {
-    title: 'Frontend & UI',
-    skills: frontendSkills,
-  },
-  {
-    title: 'Bases de données',
-    skills: databaseSkills,
-  },
-  {
-    title: 'DevOps & Production',
+    title: 'DevOps & Cloud',
     skills: devopsSkills,
-  },
-  {
-    title: 'Soft Skills',
-    skills: softSkills,
   },
 ]
 
@@ -163,87 +130,61 @@ export const skillCategoriesWithIcons = [
     skills: backendSkills,
   },
   {
-    title: 'Messaging & Event Streaming',
+    title: 'Event Streaming & Messaging',
     icon: MessageSquare,
-    skills: messagingSkills,
+    skills: eventStreamingSkills,
   },
   {
-    title: 'Frontend & UI',
-    icon: Code2,
-    skills: frontendSkills,
-  },
-  {
-    title: 'Bases de données',
-    icon: Database,
-    skills: databaseSkills,
-  },
-  {
-    title: 'DevOps & Production',
-    icon: Monitor,
+    title: 'DevOps & Cloud',
+    icon: Cloud,
     skills: devopsSkills,
-  },
-  {
-    title: 'Soft Skills',
-    icon: User,
-    skills: softSkills,
   },
 ]
 
 export const stackCategoriesWithIcons = [
   {
-    title: 'Langages & Frameworks',
-    icon: Code2,
-    items: [
-      'C#',
-      '.NET / .NET Core',
-      'ASP.NET Core',
-      'Entity Framework Core',
-      'JavaScript / TypeScript',
-      'React',
-      'Next.js',
-    ],
+    title: 'Backend & Architecture',
+    icon: Server,
+    items: ['.NET 8+', 'ASP.NET Core', 'Entity Framework Core', 'API REST / GraphQL', 'Microservices'],
   },
   {
-    title: 'Messaging & Event Streaming',
+    title: 'Event Streaming & Messaging',
     icon: MessageSquare,
-    items: ['Apache Kafka', 'RabbitMQ', 'SignalR', 'Event Sourcing', 'CQRS'],
+    items: ['Apache Kafka', 'RabbitMQ', 'Event Sourcing', 'CQRS'],
   },
   {
-    title: 'Bases de données',
+    title: 'Data & Storage',
     icon: Database,
-    items: [
-      'MongoDB',
-      'SQL Server',
-      'PostgreSQL',
-      'Redis',
-      'Elasticsearch',
-    ],
+    items: ['MongoDB', 'PostgreSQL', 'SQL Server', 'Redis'],
   },
   {
-    title: 'DevOps & Infrastructure',
+    title: 'DevOps & Cloud',
     icon: Cloud,
-    items: [
-      'Docker',
-      'Kubernetes',
-      'CI/CD (Gitlab CICD, Azure DevOps)',
-      'Prometheus / Grafana',
-    ],
+    items: ['Docker', 'Kubernetes', 'GitLab CI / Azure DevOps', 'Prometheus / Grafana'],
+  },
+]
+
+// Structure unifiée simplifiée - Essentiel 2025-2026
+export const unifiedSkillsAndStack = [
+  {
+    title: 'Backend & Architecture',
+    icon: Server,
+    skills: backendSkills,
   },
   {
-    title: 'Outils & Méthodologies',
-    icon: Settings,
-    items: [
-      'Git',
-      'Vite',
-      'Tailwind CSS',
-      'Framer Motion',
-      'AutoMapper',
-      'Clean Architecture',
-      'Agile / Scrum',
-      'TDD / BDD',
-      'Monitoring & Observabilité',
-      'MCO / Support Niveau 3',
-    ],
+    title: 'Event Streaming & Messaging',
+    icon: MessageSquare,
+    skills: eventStreamingSkills,
+  },
+  {
+    title: 'Data & Storage',
+    icon: Database,
+    skills: databaseSkills,
+  },
+  {
+    title: 'DevOps & Cloud',
+    icon: Cloud,
+    skills: devopsSkills,
   },
 ]
 
@@ -396,7 +337,6 @@ export const navItems = [
   { name: 'Compétences', href: '#skills' },
   { name: 'Expériences', href: '#experience' },
   { name: 'Projets', href: '#projects' },
-  { name: 'Stack', href: '#stack' },
   { name: 'Contact', href: '#contact' },
 ]
 

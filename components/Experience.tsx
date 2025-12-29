@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react'
 import { experiences } from '@/constants/data'
@@ -77,36 +76,6 @@ export default function Experience() {
               <p className="text-gray-400 mb-8 leading-relaxed text-base">
                 {exp.description}
               </p>
-
-              <div className="mb-8">
-                <h4 className="text-sm font-bold text-gray-300 mb-4 uppercase tracking-wider">
-                  Points clés
-                </h4>
-                <ul className="space-y-3">
-                  {exp.highlights.map((highlight, i) => (
-                    <motion.li
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={
-                        isInView
-                          ? { opacity: 1, x: 0 }
-                          : { opacity: 0, x: -10 }
-                      }
-                      transition={{
-                        delay: index * 0.15 + i * 0.1 + 0.3,
-                        duration: 0.4,
-                      }}
-                      className="flex items-start gap-3 text-sm text-gray-400"
-                    >
-                      <CheckCircle2
-                        className="text-blue-400 mt-0.5 flex-shrink-0"
-                        size={18}
-                      />
-                      <span>{highlight}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
 
               <div className="flex flex-wrap gap-2 pt-6 border-t border-white/10">
                 {exp.technologies.map((tech) => (

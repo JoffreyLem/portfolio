@@ -47,9 +47,9 @@ export default function Navigation() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xl font-bold gradient-accent-text"
+            className="text-xl font-bold gradient-accent-text font-mono"
           >
-            Portfolio
+            &lt;Dev /&gt;
           </motion.a>
 
           {/* Desktop Navigation */}

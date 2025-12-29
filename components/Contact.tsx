@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Mail, Linkedin, Github, Send } from 'lucide-react'
 
@@ -113,7 +112,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16 text-sm text-gray-500"
         >
-          <p>© 2025 - Portfolio Développeur Logiciel</p>
+          <p>© 2025 - Joffrey - Ingénieur Développeur Expert</p>
         </motion.div>
       </div>
     </section>

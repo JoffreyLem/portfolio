@@ -36,6 +36,13 @@ export interface StackCategory {
   items: string[]
 }
 
+export interface UnifiedSkillCategory {
+  title: string
+  icon: (props: { className?: string }) => JSX.Element
+  skills?: Skill[]
+  items?: string[]
+}
+
 export interface NavItem {
   name: string
   href: string
