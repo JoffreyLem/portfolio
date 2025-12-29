@@ -13,6 +13,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
+      aria-label="Projets techniques"
       className="py-32 px-4 sm:px-6 lg:px-8 relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f0f] to-transparent" />

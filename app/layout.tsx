@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
+import { StructuredDataScript } from '@/components/StructuredData'
 import './globals.css'
 
 const inter = Inter({
@@ -55,6 +56,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="dark">
+      <head>
+        <StructuredDataScript />
+      </head>
       <body className={inter.variable}>{children}</body>
     </html>
   )

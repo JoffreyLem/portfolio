@@ -33,6 +33,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
+      aria-label="Contact"
       className="py-32 px-4 sm:px-6 lg:px-8 relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f0f] to-[#0a0a0a]" />

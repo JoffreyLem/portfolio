@@ -340,5 +340,5 @@ export const navItems = [
   { name: 'Contact', href: '#contact' },
 ]
 
-export const techStack = ['C# / .NET', 'Kafka', 'RabbitMQ', 'React', 'MongoDB']
+export const techStack = ['C# / .NET', 'Kafka', 'RabbitMQ', 'React', 'MongoDB', 'Docker', 'Kubernetes']
 

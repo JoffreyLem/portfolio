@@ -12,6 +12,7 @@ export default function SkillsAndStack() {
     <section
       id="skills"
       ref={ref}
+      aria-label="Compétences et Stack technique"
       className="py-32 px-4 sm:px-6 lg:px-8 relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f0f] to-transparent" />

@@ -14,6 +14,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
+      aria-label="Expériences professionnelles"
       className="py-32 px-4 sm:px-6 lg:px-8 bg-[#0f0f0f]"
     >
       <div className="max-w-6xl mx-auto">

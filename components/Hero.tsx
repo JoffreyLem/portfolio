@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDown, Sparkles } from 'lucide-react'
 import { techStack } from '@/constants/data'
+import { useEffect, useState } from 'react'
 
 const codeExample = `public class DistributedCacheService<T> 
     where T : class, IEntity
@@ -204,9 +205,32 @@ const highlightCode = (line: string, lineIndex: number) => {
 }
 
 export default function Hero() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(mediaQuery.matches)
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches)
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
+  const motionProps = prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, x: -30 },
+        animate: { opacity: 1, x: 0 },
+        transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+      }
+
   return (
     <section
       id="hero"
+      aria-label="Section principale - Présentation"
       className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden"
     >
       {/* Animated background gradient */}
@@ -219,9 +243,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Presentation */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            {...motionProps}
             className="text-center lg:text-left"
           >
             <motion.div

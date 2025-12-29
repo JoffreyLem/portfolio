@@ -32,8 +32,21 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isMobileMenuOpen])
+
   return (
     <nav
+      aria-label="Navigation principale"
+      role="navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? 'glass-strong border-b border-white/10 shadow-lg shadow-black/20'
@@ -47,7 +60,8 @@ export default function Navigation() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xl font-bold gradient-accent-text font-mono"
+            className="text-xl font-bold gradient-accent-text font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] rounded"
+            aria-label="Retour à l'accueil"
           >
             &lt;Dev /&gt;
           </motion.a>
@@ -61,11 +75,12 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] ${
                   activeSection === item.href
                     ? 'text-foreground'
                     : 'text-gray-400 hover:text-foreground'
                 }`}
+                aria-current={activeSection === item.href ? 'page' : undefined}
               >
                 {item.name}
                 {activeSection === item.href && (
@@ -95,9 +110,11 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="md:hidden text-foreground p-2 rounded-lg hover:bg-white/5 transition-colors"
+            className="md:hidden text-foreground p-2 rounded-lg hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -108,11 +125,13 @@ export default function Navigation() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="md:hidden glass-strong border-t border-white/10"
+            role="menu"
           >
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item, index) => (
@@ -122,8 +141,9 @@ export default function Navigation() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className="block px-4 py-3 text-sm font-medium text-gray-400 hover:text-foreground rounded-lg hover:bg-white/5 transition-all"
+                  className="block px-4 py-3 text-sm font-medium text-gray-400 hover:text-foreground rounded-lg hover:bg-white/5 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a]"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  role="menuitem"
                 >
                   {item.name}
                 </motion.a>
