@@ -2,6 +2,8 @@
  * Types partagés pour le portfolio
  */
 
+import type { ReactElement } from 'react'
+
 export interface Experience {
   company: string
   role: string
@@ -38,7 +40,7 @@ export interface StackCategory {
 
 export interface UnifiedSkillCategory {
   title: string
-  icon: (props: { className?: string }) => JSX.Element
+  icon: (props: { className?: string }) => ReactElement
   skills?: Skill[]
   items?: string[]
 }
