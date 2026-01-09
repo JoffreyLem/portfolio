@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     period: '2022 - Poste actuel',
     description:
       'Ingénieur développeur .NET chez Extia, envoyé en mission chez différents clients. Développement et maintenance d\'applications backend avec expertise en architectures distribuées, microservices et gestion de production.',
-    technologies: ['C#', '.NET', 'ASP.NET Core', 'Microservices', 'API REST', 'Docker', 'Kafka', 'Event Streaming', 'JavaScript', 'MongoDB', 'RabbitMQ'],
+    technologies: ['C#', '.NET', 'ASP.NET Core', 'Microservices', 'API REST', 'Docker', 'Kafka', 'Event Streaming', 'JavaScript', 'MongoDB', 'RabbitMQ', 'Redis'],
     highlights: [
       'Missions chez différents clients (Peaksys/Cdiscount, Floa Banque)',
       'Développement d\'APIs et systèmes distribués',
@@ -38,7 +38,7 @@ export const experiences: Experience[] = [
         period: 'Mission en cours',
         description:
           'Mission chez Peaksys (Cdiscount) via Extia. Intégré à une équipe produit, développement et maintenance de systèmes distribués utilisant Kafka pour la gestion des événements en temps réel. Responsabilités sur le développement d\'APIs et la gestion de production en tant qu\'équipe produit.',
-        technologies: ['C#', '.NET', 'Kafka', 'Microservices', 'Event Streaming', 'API REST'],
+        technologies: ['C#', '.NET', 'Kafka', 'Docker', 'Kubernetes', 'Microservices', 'Event Streaming', 'API REST', 'Snowflake', 'MongoDB'],
         highlights: [
           'Développement de services événementiels haute performance',
           'Développement d\'APIs REST pour la gestion des commandes',
@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
         period: '2022 - 2025',
         description:
           'Mission chez Floa Banque via Extia. Développement transverse sur plusieurs projets bancaires, avec focus sur la messagerie asynchrone et les bases de données NoSQL. Développement d\'APIs et gestion de production sur les systèmes critiques.',
-        technologies: ['C#', 'JavaScript', 'MongoDB', 'RabbitMQ', '.NET', 'API REST'],
+        technologies: ['C#', '.NET', 'JavaScript', 'Docker', 'MongoDB', 'Microservices', 'Redis', 'Event Streaming', 'API REST'],
         highlights: [
           'Architecture de messagerie distribuée avec RabbitMQ',
           'Développement d\'APIs REST pour services bancaires',
@@ -89,14 +89,14 @@ const backendSkills = [
 const eventStreamingSkills = [
   { name: 'Apache Kafka ( Apprentissage )', level: 2.5 },
   { name: 'RabbitMQ', level: 4 },
-  { name: 'Event-Driven Architecture', level: 4 },
-  { name: 'Event Sourcing / CQRS', level: 4 },
+  { name: 'Event-Driven Architecture', level: 3.5 },
+  { name: 'Event Sourcing / CQRS', level: 3.5 },
 ]
 
 const databaseSkills = [
   { name: 'MongoDB', level: 4 },
-  { name: 'PostgreSQL', level: 4 },
-  { name: 'SQL Server', level: 4 },
+  { name: 'PostgreSQL', level: 3.5 },
+  { name: 'SQL Server', level: 3 },
   { name: 'Redis', level: 3 },
 ]
 
