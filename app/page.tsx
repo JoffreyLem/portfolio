@@ -36,13 +36,13 @@ export default function Home() {
         Aller au contenu principal
       </a>
       <main id="main-content" className="min-h-screen">
-        <Navigation />
-        <Hero />
+      <Navigation />
+      <Hero />
         <SkillsAndStack />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
     </>
   )
 }
